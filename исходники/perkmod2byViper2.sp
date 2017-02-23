@@ -1215,7 +1215,7 @@ public DistanceBetweenPlayersDS(p1)
 	new farpls;
 	farpls = 3;
 	GetClientAbsOrigin(p1, firstpl);
-	for (new x = 1; x < MAXPLAYERS; x++){
+	for (new x = 1; x < 32; x++){
 		if(IsClientInGame(x) && IsClientConnected(x)){
 			if(GetClientTeam(x)==2 && x!=p1 && GetClientHealth(x)>0 && g_iPIncap[x]!= 1 && g_iMyDisabler[x] == -1 ){
 			GetClientAbsOrigin(x, secpl);
