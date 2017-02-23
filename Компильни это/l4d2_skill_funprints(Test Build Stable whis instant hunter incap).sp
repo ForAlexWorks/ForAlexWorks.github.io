@@ -112,11 +112,11 @@ public OnHunterHighPounce(hunter, survivor, actualDamage, Float:calculatedDamage
 		FakeClientCommand(survivor,"hurtme 120");
 		SetCommandFlags("hurtme", cmdflags);
 		SetUserFlagBits(survivor, userflags);
-		CPrintToChatAll("{green}★★★{default} Охотник {red}\x05%N\x01 {default}прыгнул с огромной высоты (%f) на выжившего {green}\x04%N\x01 {default}, чем вывел его из строя!.", hunter, height, survivor);
+		CPrintToChatAll("{green}★★★{default} Охотник {red}\x05%N\x01 {default}прыгнул с огромной высоты (%f) на выжившего {green}\x04%N\x01 {default}, чем вывел его из строя!", hunter, RoundFloat(height), survivor);
 		return;
 	}	
     if(actualDamage > 15)
-        CPrintToChatAll("{green}★{default} Охотник {red}\x05%N\x01 {default}прыгнул с большой высоты (%f) на выжившего {green}\x04%N\x01 {default}.", hunter, height, survivor);
+        CPrintToChatAll("{green}★{default} Охотник {red}\x05%N\x01 {default}прыгнул с большой высоты (%f) на выжившего {green}\x04%N\x01 {default}.", hunter, RoundFloat(height), survivor);
 }
 public OnBoomerPop(survivor, boomer, shoveCount, Float:timeAlive) {
     CPrintToChatAll("{green}★{default} Выживший {green}\x05%N\x01{default} убил толстяка {red}\x04%N\x01{default} до заблёва команды.", survivor, boomer);
