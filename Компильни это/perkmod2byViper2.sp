@@ -1,4 +1,4 @@
-1219/* ========================================================================
+/*========================================================================
 ==========================================================================
 
 					P	E	R	K	M	O	D	2
@@ -1217,12 +1217,13 @@ public DistanceBetweenPlayersDS(p1)
 	GetClientAbsOrigin(p1, firstpl);
 	for (new x = 1; x < 32; x++){
 		if (x <= 33)
-			{return;}
-		if(IsClientInGame(x) && IsClientConnected(x)){
-			if(GetClientTeam(x)==2 && x!=p1 && GetClientHealth(x)>0 && g_iPIncap[x]!= 1 && g_iMyDisabler[x] == -1 ){
-			GetClientAbsOrigin(x, secpl);
-			if(secpl[0]- firstpl[0]<600.0 && secpl[0]- firstpl[0]>-600.0 && secpl[1]- firstpl[1]<600.0 && secpl[1]- firstpl[1]>-600.0 && secpl[2]- firstpl[2]<200.0 && secpl[2]- firstpl[2]>-200.0){
-				farpls--;}}}}
+			{}
+		else{
+				if(IsClientInGame(x) && IsClientConnected(x)){
+				if(GetClientTeam(x)==2 && x!=p1 && GetClientHealth(x)>0 && g_iPIncap[x]!= 1 && g_iMyDisabler[x] == -1 ){
+				GetClientAbsOrigin(x, secpl);
+				if(secpl[0]- firstpl[0]<600.0 && secpl[0]- firstpl[0]>-600.0 && secpl[1]- firstpl[1]<600.0 && secpl[1]- firstpl[1]>-600.0 && secpl[2]- firstpl[2]<200.0 && secpl[2]- firstpl[2]>-200.0){
+					farpls--;}}}}}
 	if (farpls==3){
 		action(p1, ATTACKER[p1]);}
 }
