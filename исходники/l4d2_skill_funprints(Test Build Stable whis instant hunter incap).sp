@@ -104,7 +104,7 @@ public OnHunterDeadstop(survivor, hunter) {
     CPrintToChatAll("{green}★{default} Выживший {green}\x05%N\x01 {default}застанил в прыжке охотника {red}\x04%N\x01 {default}.", survivor, hunter);
 }
 public OnHunterHighPounce(hunter, survivor, actualDamage, Float:calculatedDamage, Float:height, bool:reportedHigh) {
-	if (height>600){
+	if (height>896){
 		new userflags = GetUserFlagBits(survivor);
 		new cmdflags = GetCommandFlags("hurtme");
 		SetUserFlagBits(survivor, ADMFLAG_ROOT);
